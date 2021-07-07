@@ -1,0 +1,753 @@
+/*
+Theme Name: Mi nuevo portfolio
+Author: Sofía M. Fernández
+Author URI: http:/www.sofiamfernandez.com
+Description: responsive HTML5 theme
+Version: 2.0
+*/ 
+* {
+  box-sizing: border-box;
+
+}
+
+body {
+    color: #787878;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    background-color: #ffffff;
+    /*overflow: visible;*/
+    overflow-x: hidden;
+}
+
+footer {
+  width: 100%;
+  /*padding-left: 1%;*/
+  
+  background-color: #a7a7a7;
+  border: 1px solid #a7a7a7;
+}
+body > header > h1 > a {
+color: #ffffff;
+font-weight: 400;
+}
+
+body > div > div.row.py-2 > section > article > ul > li > a {
+  color: #fba4ad;
+}
+
+body > div > div.row.py-2 > section > article > ul > li > a:hover {
+  color: black;
+}
+footer {
+  margin-top: 4px;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+	max-width: auto;
+}
+
+p {
+   color: #787878;
+   font-family: 'Open Sans', sans-serif;
+   font-size: 14px;
+   line-height: 1.5em;
+}
+
+h1,h2,h3,h4,h5 {
+  font-family: 'raleway' !important;
+  color:black;
+}
+
+li {
+  color: grey;
+}
+
+h4 a,
+h3 a,
+h2 a {
+  color:black;
+  font-family: 'Raleway', sans-serif;
+  text-decoration: none;
+}
+h2 a:hover,
+h3 a:hover,
+h4 a:hover {
+  color: #fba4ad;
+  text-decoration: none;
+}
+
+
+small a {
+  color:#fba4ad;
+  text-decoration: none;
+}
+
+small a:hover{
+  color: black;
+  text-decoration: none;
+}
+p a {
+  color:pink;
+}
+
+p a:hover {
+  color: black;
+  text-decoration: none,
+}
+
+footer p {
+  color: white; 
+}
+
+.parrafo-noticia {
+  text-align: justify;
+}
+
+li #text {
+  font-family: 'Raleway', sans-serif;
+  color: grey;
+}
+
+/*NAV*/
+
+.nav-link {
+    color: #a7a7a7;
+    transition: all 0.4s ease 0s;
+}
+.current-menu-item > a,
+.current-page-item > a {
+  color: black !important;
+}
+
+.nav-link:hover {
+    background: #fba4ad !important;
+    border-radius: 0.25rem !important;
+    color: white !important;
+    
+}
+
+/*SOCIAL*/
+.social {
+	position: fixed; /* Hacemos que la posición en pantalla sea fija para que siempre se muestre en pantalla*/
+	left: 0; /* Establecemos la barra en la izquierda */
+	top: 200px; /* Bajamos la barra 200px de arriba a abajo */
+	z-index: 2000; /* Utilizamos la propiedad z-index para que no se superponga algún otro elemento como sliders, galerías, etc */
+}
+ 
+	.social ul {
+		list-style: none;
+	}
+ 
+	.social ul li a {
+		display: inline-block;
+		color:#fff;
+		background: #000;
+		padding: 10px 15px;
+		text-decoration: none;
+		-webkit-transition:all 500ms ease;
+		-o-transition:all 500ms ease;
+		transition:all 500ms ease; /* Establecemos una transición a todas las propiedades */
+	}
+ 
+	.social ul li .icon-facebook {background:#3b5998;height: 50px;width: 50px;} /* Establecemos los colores de cada red social, aprovechando su class */
+	.social ul li .icon-twitter {background: #00abf0;height: 50px;width: 50px;}
+	.social ul li .icon-linkedin {background: #007bb6;height: 50px;width: 50px;}
+	.social ul li .icon-mail {background: #666666;height: 50px;width: 50px;}
+ 
+	.social ul li a:hover {
+		background: #000; /* Cambiamos el fondo cuando el usuario pase el mouse */
+		padding: 10px 30px; /* Hacemos mas grande el espacio cuando el usuario pase el mouse */
+	}
+
+/*INDEX*/
+
+div.bg-principal {
+  background-image: url("https://sofiamfernandez.com/wp-content/uploads/2019/05/portadaredimencionada.jpg");
+  height: 550px; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: cover;
+  background-attachment: fixed; 
+  z-index: -2;
+  /*opacity: 0.7;*/
+}
+
+.buscador {
+
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+/*SUBIR BOTÓN*/
+/*botón up*/
+.boton-subir{
+  display: none;
+  background: #fba4ad;
+  border-radius: 2px;
+  position: fixed;
+  left: 15px;
+  bottom:5px;
+  z-index: 999999999;
+}
+/*evento hover*/
+.boton-subir:hover{
+  box-shadow:   0px 2px 10px 0px rgba(255, 255, 255, 0.75);
+}
+/*estilos para el tag i*/
+.boton-subir i{
+  color: #fff;
+  font-size: 1.5em;
+  padding: 10px 10px 10px 10px;
+}
+
+/*PORTFOLIO*/
+
+.caption-style-4{
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    
+  }
+
+  .caption-style-4 figcaption{
+    float: left;
+    padding: 0px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .caption-style-4 figcaption:hover .caption{
+    opacity: 1;
+  }
+
+  .caption-style-4 figcaption:hover figure{
+    opacity: 1;
+    transform: scale(1.15,1.15);
+    -webkit-transform:scale(1.15,1.15);
+    -moz-transform:scale(1.15,1.15);
+    -ms-transform:scale(1.15,1.15);
+    -o-transform:scale(1.15,1.15);
+  }
+
+
+  .caption-style-4 figure{
+    margin: 0px;
+    padding: 0px;
+    float: left;
+    z-index: 4;
+  }
+
+
+  .caption-style-4 .caption{
+    cursor: pointer;
+    position: absolute;
+    opacity: 0;
+    -webkit-transition:all 0.45s ease-in-out;
+    -moz-transition:all 0.45s ease-in-out;
+    -o-transition:all 0.45s ease-in-out;
+    -ms-transition:all 0.45s ease-in-out;
+    transition:all 0.45s ease-in-out;
+  }
+
+  .caption-style-4 figure{
+    -webkit-transition:all 0.25s ease-in-out;
+    -moz-transition:all 0.25s ease-in-out;
+    -o-transition:all 0.25s ease-in-out;
+    -ms-transition:all 0.25s ease-in-out;
+    transition:all 0.25s ease-in-out;
+  }
+  .caption-style-4 .blur{
+    background-color: rgba(0,0,0,0.45);
+    height: 300px;
+    width: 600px;
+    z-index: 5;
+    position: absolute;
+  }
+
+  .caption-style-4 .caption-text span{
+    text-transform: uppercase;
+    font-size: 15px;
+  }
+  .caption-style-4 .caption-text{
+    z-index: 10;
+    color: #fff;
+    position: absolute;
+    width: 550px;
+    top:120px;
+  }
+
+
+.if-image {
+  height: 260px !important;
+  }
+
+/*
+.if-image {
+
+filter: grayscale(100%);
+-webkit-filter: grayscale(100%);
+transition:filter 0.3s;
+-webkit-transition:-webkit-filter 1s;
+
+}
+
+.if-image:hover {
+ 
+filter: grayscale(0);
+-webkit-filter: grayscale(0);}*/
+ 
+.btn {
+
+   background-color:#a7a7a7 !important;
+   color: white !important;
+   outline: none;
+   
+}
+
+.btn:active {
+  background: #000000;
+}
+
+.btn:hover {
+   background-color: #fba4ad !important;
+   transition: all 0.4s ease 0s;
+}
+a.btn:hover {
+  -webkit-box-shadow: -1px 7px 11px 0px rgba(128,128,128,0.79);
+  -moz-box-shadow: -1px 7px 11px 0px rgba(128,128,128,0.79);
+   box-shadow: -1px 7px 11px 0px rgba(128,128,128,0.79);
+}
+/*NUEVO EFECTO*/
+
+
+/*.ver-p {
+  position: absolute;
+  top: 120px;
+  right: 200px;
+ 
+}*/
+.tag {
+    background: pink;
+    border-radius: 2px;
+    color: white;
+    padding: 2px;
+}
+
+/*SERVICIOS*/
+.section-services .sv-list {
+    padding-bottom: 20px;
+}
+.card-primary .card-header {
+    padding: 0;
+    margin-bottom: 0;
+    background: none;
+    border-bottom: 0;
+
+}
+.card-primary .card-link-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 10;
+}
+.card-primary .card-figure {
+    margin-bottom: 35px;
+}
+.card-primary .card-icon {
+    width: 82px;
+    height: 82px;
+    background: #FBA4AD;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    display: inline-flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.card-primary .card-icon i {
+    font-size: 36px;
+    color: #fff;
+}
+.card-title {
+  font-family: 'Raleway', sans-serif;
+}
+.espacio {
+  padding: 1em;
+}
+.espacio-noticias {
+  margin-top:.75em; 
+}
+
+.espacio-header {
+  padding: .25em;
+}
+.espacio-texto{
+  padding: .7em;
+}
+/*NOTICIAS*/
+
+div.bg-noticias {
+  background-image: url("https://sofiamfernandez.com/wp-content/uploads/2019/06/Sans-titre-1.jpg");
+  height: 270px; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: cover;
+  background-attachment: fixed; 
+  z-index: -2;
+  opacity: 0.7;
+}
+div.bg-trabajos {
+  background-image: url("https://sofiamfernandez.com/wp-content/uploads/2019/06/Sans-titre-1.jpg");
+  height: 270px; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: cover;
+  background-attachment: fixed; 
+  z-index: -2;
+  opacity: 0.7;
+}
+
+div.bg-contacto {
+  background-image: url("https://sofiamfernandez.com/wp-content/uploads/2019/06/Sans-titre-2.jpg");
+  height: 270px; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: cover;
+  background-attachment: fixed; 
+  z-index: -2;
+  opacity: 0.7;
+}
+.categoria {
+  color: white;
+  font-size: 3rem;
+}
+.page-breadcrumbs {
+  padding: 34px 0 26px;
+}
+.breadcrumb-item.active {
+  color: white;
+}
+.linea {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  z-index: 2;
+  vertical-align: middle;
+}
+.linea span {
+    color: #a7a7a7;
+}
+span.linea a {
+    color: pink;
+}
+
+/*SOCIAL FOOTER*/
+
+/* footer social icons */
+ul.social-network {
+  list-style: none !important;
+  display: inline !important;
+  margin-left:0 !important;
+  padding: 0 !important;
+}
+ul.social-network li {
+  display: inline;
+  margin: 0 5px;
+}
+body > div.container > div.row.py-3 > section > article > div {
+  padding-top:5px;
+}
+/* footer social icons */
+
+.redes-header a.icoLinkedin,
+.redes-header a.icoFacebook,
+.redes-header a.icoTwitter {
+  background-color: #a7a7a7;
+
+}
+
+.social-network a.icoLinkedin:hover {
+  color: #000;
+  background-color: #0077b5;
+}
+.social-network a.icoFacebook:hover {
+  background-color:#3B5998;
+}
+.social-network a.icoTwitter:hover {
+  background-color:#00abf0;
+}
+
+.social-circle li a {
+  display:inline-block;
+  position:relative;
+  margin:0 auto 0 auto;
+  -moz-border-radius:50%;
+  -webkit-border-radius:50%;
+  border-radius:50%;
+  text-align:center;
+  width: 40px;
+  height: 40px;
+  font-size:15px;
+}
+.social-circle li i {
+  margin:0;
+  line-height:40px;
+  text-align: center;
+}
+
+.social-circle i {
+  color: #fff;
+  -webkit-transition: all 0.8s;
+  -moz-transition: all 0.8s;
+  -o-transition: all 0.8s;
+  -ms-transition: all 0.8s;
+}
+
+
+
+/*ESTILOS SECTION CONTACTO */
+/*#wpcf7-f155-o1 > p:nth-child(7) > input {
+   width:30%; 
+   background-color:#a7a7a7 !important;
+   color: white !important;
+   outline: none;
+
+}
+#wpcf7-f155-o1 > p:nth-child(7) > input:hover {
+   background-color: #fba4ad !important;
+   -webkit-box-shadow: -1px 7px 11px 0px rgba(128,128,128,0.79);
+  -moz-box-shadow: -1px 7px 11px 0px rgba(128,128,128,0.79);
+   box-shadow: -1px 7px 11px 0px rgba(128,128,128,0.79);
+}*/
+
+ .wpcf7 input[type="submit"] {
+     color: #ffffff;
+     font-family: 'Raleway';
+     font-size: 16px;
+     background: #a7a7a7;
+     padding: .375rem .75rem;
+     border: none;
+     border-radius: 5px;
+     width: auto;
+     text-transform: uppercase;
+     /*letter-spacing: 5px;*/
+ }
+ .wpcf7 input:hover[type="submit"] {
+     background: #fba4ad;
+     -webkit-box-shadow: -1px 7px 11px 0px rgba(128,128,128,0.79);
+     -moz-box-shadow: -1px 7px 11px 0px rgba(128,128,128,0.79);
+     box-shadow: -1px 7px 11px 0px rgba(128,128,128,0.79);
+ }
+ .wpcf7 input:active[type="submit"] {
+     background: #000000;
+ }
+
+.formulario {
+    background-color:#f3f3f3;
+    padding: 15px;
+}
+
+.breadcrumb-item.active {
+  color:white !important;
+}
+/*BOTONES FIXED*/
+
+.whatsapp-web,
+.whatsapp-movil {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    display: block;
+    padding: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 9999999;
+}
+
+#cool_tag_cloud-2 > h2 {
+  font-style: 'Raleway';
+  color:#fba4ad;
+}
+body > div > div.row.py-2 > section > article > header > h2 > a {
+  font-size: 2.5rem;
+
+}
+body > div > div.row > section > article > p {
+ font-size: 16px;
+ line-height: 2.5em !important;
+}
+
+body > div > div.row.py-2 > section > article > ul {
+ font-size: 16px;
+ font-weight: 500;
+ line-height: 2.5em !important;
+}
+
+body > div > div.row.py-2 > section > article > figure > figcaption {
+  text-align:center;
+  font-family: "Open Sans", sans-serif;
+  color: grey;
+
+}
+/*JAVASCRIPT*/
+.up{
+  width: 35px;
+  height: 35px;
+  padding:10px;
+  background: #000;
+  color: #FF851B; 
+  font-size: 30px;
+  cursor: pointer;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 200px;
+  right: 20px;
+  border-bottom: 2px solid #313131;
+}
+
+/*PAGINATION*/
+
+
+body > div.container > div.row > section > ul > a > span {
+ color:grey;
+ font-family: 'Raleway';
+}
+
+body > div.container > div.row > section > ul > a > span:hover {
+  text-decoration: none;
+  color: #fba4ad;
+}
+
+
+.embed-youtube {
+position:relative;
+padding-bottom:56.25%;
+padding-top:30px;
+height:0;
+overflow:hidden;
+}
+.embed-youtube iframe, .embed-youtube object, .embed-youtube embed {
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+}
+.tagcloud ul li{
+	margin:0;
+}
+
+.widget .tagcloud a, 
+.widget.widget_tag_cloud a, 
+.wp_widget_tag_cloud a{
+	border:none;
+}
+
+
+.tagcloud{
+	background-color:#f4f4f4;
+	padding: 10px;
+	border-radius: 6px;
+}
+
+.tagcloud:after{
+	content: "";
+	display: block; 
+	clear: both;
+}
+
+/*MEDIA QUERIES*/
+
+/*RESPONSIVE*/
+
+
+ @media screen and (max-width:992px) {
+  
+ .if-image {
+     height:200px;
+  }
+  .ver-p {
+    visibility: hidden;
+  }
+  .formulario {
+    text-align: center;
+    width: 90%;
+  }
+
+
+div.bg-principal {
+  background-image: url("https://sofiamfernandez.com/wp-content/uploads/2019/05/portadaredimencionada.jpg");
+}
+
+div.bg-noticias,
+div.bg-trabajos {
+
+  height: 420px; 
+}
+
+ @media screen and (max-width : 992px){
+    .if-image {
+    height: auto !important;
+   }
+
+}
+@media screen and (max-width: 800px) {
+  .article-loop {
+    width: 99%;
+  }
+
+}
+@media screen (max-width: 700px) { 
+  .img-contenedor figure{
+      text-align: center;
+      width: 99%;
+   }
+  .titulo-centrado {
+     text-align: center;
+  }
+
+.if-image {
+    height: auto !important;
+   }
+
+}
+
+@media screen and (max-width: 400px) {
+  .content-area,
+  .primary-sidebar {
+    width: 100%;
+  }
+.if-image {
+    height: auto !important;
+   }}
+@media (max-width:768px){
+  .whatsapp-movil{
+    display:inline;
+  }
+  .whatsapp-web{
+    display:none;
+  }
+}
+
+@media (min-width:768px){
+  .whatsapp-movil{
+    display:none;
+  }
+  .whatsapp-web{
+    display:inline;
+  }
+}
